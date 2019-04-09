@@ -1,4 +1,4 @@
-extends ../../layout.pug
+extends /layout.pug
 
 block content
   - const d = pageInfo.data
@@ -10,7 +10,7 @@ block content
   h5.url
     a(href=daurl) #{decodeURIComponent(daTitle)}
 
-  include ../includes/pageRunInfo
+  include /url/includes/pageRunInfo
   p
     .large All runs:&nbsp;
       each val, index in runPages
@@ -28,7 +28,7 @@ block content
 
   if pageInfo.error
     .error= pageInfo.error
-  include ./tabs.pug
+  include /url/iteration/tabs.pug
 
   #tabSections
     section#summary-panel
@@ -112,34 +112,34 @@ block content
                a(href=screenshotName)
                  img.screenshot(src=screenshotName, width=width, alt='Screenshot')
        .downloads
-        include ./downloads.pug
+        include /url/iteration/downloads.pug
     if d.browsertime && d.browsertime.run && d.browsertime.run.har
       section#waterfall-panel
-        include ../waterfall/index.pug
+        include /url/waterfall/index.pug
 
     if options.browsertime.video
       section#video-panel
-        include ../video/index.pug
+        include /url/video/index.pug
 
     if options.browsertime.video && options.videoParams.createFilmstrip
       section#filmstrip-panel
-        include ../filmstrip/index.pug        
+        include ../filmstrip/index.pug
 
     if d.coach && d.coach.run
       section#coach-panel
-        include ../coach/index.pug
+        include /url/coach/index.pug
 
     if d.browsertime && d.browsertime.run
       section#metrics-panel
-        include ../metrics/index.pug
+        include /url/metrics/index.pug
 
     if d.pagexray && d.pagexray.run
       section#pagexray-panel
-        include ../pagexray/index.pug
-    
+        include /url/pagexray/index.pug
+
     if d.thirdparty && d.thirdparty.run
       section#thirdparty-panel
-        include ../thirdparty/index.pug
+        include /url/thirdparty/index.pug
 
     each pageRun in pageRuns
       - const panelName = pageRun.id + '-panel'

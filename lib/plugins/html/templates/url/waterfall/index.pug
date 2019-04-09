@@ -16,9 +16,9 @@ if (options.html.showAllWaterfallSummary === true)
 #legend-holder
 
 if options.html.fetchHARFiles
-  include ./fetchHAR.pug
+  include /url/waterfall/fetchHAR.pug
 else
-  include ./includeHARinHTML.pug
+  include /url/waterfall/includeHARinHTML.pug
 
 .downloads
   - const harEnding = options.gzipHAR ? '.har.gz' : '.har'

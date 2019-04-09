@@ -1,4 +1,4 @@
-extends ./layout.pug
+extends /layout.pug
 
 mixin box(box)
   if (box.url)
@@ -13,7 +13,7 @@ mixin box(box)
         span.summarysmall (#{box.p90})
 
 block content
-    include runInfo
+    include /runInfo
 
     each rows in boxes
       .row

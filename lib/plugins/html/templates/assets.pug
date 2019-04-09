@@ -1,5 +1,5 @@
-extends ./layout.pug
-include _tableMixins
+extends /layout.pug
+include /_tableMixins
 
 mixin rows(assets)
   each asset in assets
@@ -14,7 +14,7 @@ mixin rows(assets)
       +kbSizeCell('size', asset.size)
       +numberCell('count', asset.requestCount)
 block content
-  include runInfo
+  include /runInfo
   if fullCount > 0
     if count < fullCount
       div Showing top #{count} assets out of #{fullCount}

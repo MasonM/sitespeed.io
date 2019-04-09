@@ -7880,6 +7880,11 @@
         "pug-walk": "^1.1.7"
       }
     },
+    "pug-multiple-basedirs-plugin": {
+      "version": "0.1.3",
+      "resolved": "https://registry.npmjs.org/pug-multiple-basedirs-plugin/-/pug-multiple-basedirs-plugin-0.1.3.tgz",
+      "integrity": "sha1-MSo9ZXsdvt+R72sF9SnK4GYap4Q="
+    },
     "pug-parser": {
       "version": "5.0.0",
       "resolved": "https://registry.npmjs.org/pug-parser/-/pug-parser-5.0.0.tgz",

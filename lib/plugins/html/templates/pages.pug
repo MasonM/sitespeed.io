@@ -1,5 +1,5 @@
-extends ./layout.pug
-include _tableMixins
+extends /layout.pug
+include /_tableMixins
 
 mixin rows(pages)
   each pageInfo, url in pages
@@ -37,7 +37,7 @@ block content
   - headings.push('Performance score')
   .row
     .column
-      include runInfo
+      include /runInfo
       .responsive
         table(data-sortable, id='pages')
           +rowHeading(headings)

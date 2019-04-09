@@ -1,5 +1,5 @@
-extends ./layout.pug
-include _tableMixins
+extends /layout.pug
+include /_tableMixins
 
 mixin rows(domainStats)
   each domain in domainStats
@@ -16,7 +16,7 @@ mixin rows(domainStats)
       +numberCell('Requests', domain.requestCount)
 
 block content
-  include runInfo
+  include /runInfo
   if topDomains
     if count < fullCount
       div Showing top #{count} domains out of #{fullCount}

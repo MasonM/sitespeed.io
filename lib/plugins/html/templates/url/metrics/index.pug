@@ -1,4 +1,4 @@
-- const browsertime = medianRun ? pageInfo.data.browsertime.pageSummary.browserScripts[medianRun.runIndex - 1] : pageInfo.data.browsertime.run 
+- const browsertime = medianRun ? pageInfo.data.browsertime.pageSummary.browserScripts[medianRun.runIndex - 1] : pageInfo.data.browsertime.run
 
 if  browsertime
   - const timings = browsertime.timings;
@@ -58,7 +58,7 @@ if  browsertime
             td.number #{h.time.ms(visualMetrics.LastVisualChange.toFixed(0))}
       .one-half.column
         .ct-chart.ct-minor-sixth#ct-visualprogress
-        include ./visualProgress.pug
+        include /url/metrics/visualProgress.pug
 
   a#browsermetrics
   h3 Browser Metrics
@@ -133,7 +133,7 @@ if  browsertime
                 td.number #{h.time.ms(value.startTime.toFixed(0))} 
 
   if options.browsertime.chrome && options.browsertime.chrome.timeline
-    include ./cpu.pug
+    include /url/metrics/cpu.pug
   .downloads
     if options.browsertime.chrome && options.browsertime.chrome.timeline
       - consttracePath = 'data/trace-' + (runNumber? runNumber : 1) + '.json.gz'

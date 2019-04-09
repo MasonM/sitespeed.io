@@ -17,12 +17,12 @@ html(lang='en')
         link(rel='apple-touch-icon-precomposed', href=assetsPath + 'img/ico/sitespeed.io-57.png')
         link(rel='shortcut icon', href=assetsPath + 'img/ico/sitespeed.io.ico')
     body
-      include ./header.pug
+      include /header.pug
       .container
 
         block content
 
-        include ./footer.pug
+        include /footer.pug
       script(src= assetsPath + 'js/sortable.min.js')
       script(src= assetsPath + 'js/chartist.min.js')
       script(src= assetsPath + 'js/chartist-plugin-axistitle.min.js')
